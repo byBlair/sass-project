@@ -1,0 +1,36 @@
+@use './variable' as *;
+
+@mixin width($wd:100%){
+    width: $wd;
+    margin: 0 auto;
+}
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin lineheight($lh:40px){
+    line-height: $lh;
+}
+@mixin center{
+    text-align: center;
+}
+@mixin padding($bottom:25px){
+    padding-bottom: $bottom;
+}
+@mixin box{
+    background-color: $back;
+    padding: 50px 0 100px 75px;
+/*     overflow: hidden; */
+}
+@mixin border($px:1px, $width:#d0cfcf){
+    border: $px solid $width;
+}
+@mixin dt{
+    font-size: $font-14;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+@mixin ab{
+    position: absolute;
+    width:90%;
+}

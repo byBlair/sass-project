@@ -1,0 +1,112 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+#footer{
+    background-color: $dark;
+}
+aside{
+    @include width($wd:95%);
+    @include flex;
+    padding: $font-50 0;
+    justify-content: space-between;
+    font-size: $font-14;   
+    color: $white;
+    dl{
+        width: 20%;
+        &:nth-child(5){
+            width: 700px;
+            padding-right: 20px;
+            dt{
+                span{
+                    width: 700px;
+                }
+            }
+            dd{
+                a{
+                    border-bottom: 1px solid #F7F5E8;
+                }
+            }
+        }
+        &:last-child{
+            dd{
+                width: 300px;
+                line-height: 25px;
+            }
+        }
+        &:first-child{
+            width: 700px;
+            padding-right: 20px;
+            dt{
+                span{
+                    width: 700px
+                }
+            }
+            dd{
+                form{
+                    line-height: 35px;
+                    ul{
+                        li{
+                            &:last-child{
+                                label{
+                                    display: block;
+                                    button{
+                                        width: 35px; height: 40px;
+                                        border: 1px solid #F7F5E8;
+                                        background-color: #252525;
+                                        border-left: none;
+                                        cursor: pointer;
+                                        i{
+                                            color: #F7F5E8;
+                                            display: block;
+                                        }
+                                    }
+                                    input{
+                                        margin-top: 15px;
+                                        width: 658px;
+                                        line-height: 35px;
+                                        border: 1px solid #F7F5E8;
+                                        background-color: #252525;
+                                    }
+                                }
+                            }
+                            p{
+                                border: 1px solid #F7F5E8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        dt{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: #F7F5E8;
+            span{
+                font-weight: bold;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #F7F5E8;
+                display: inline-block;
+                width: 300px;
+            }
+        }
+        dd{
+            margin-bottom: 15px;
+            a{
+                font-size: 12px;
+                color: #F7F5E8;
+            }
+        }
+    }
+}
+
+footer{
+    padding: 25px 0;
+    position: relative;
+    border-top: 3px solid #F7F5E8;
+    small{
+        font-size: $font-16;
+        color: #F7F5E8;
+        padding-left: $font-40;
+    } 
+}

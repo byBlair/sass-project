@@ -1,0 +1,470 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+#wrap{
+    @include width;
+}
+
+/* article.box01 */
+article.box01{
+    background-color: $white;
+    div{
+        display: flex;
+        div.box1{
+            @include width($wd:875px);
+            padding-top: 110px;
+            display: flex;
+            dl{
+                font-size: $font-16;
+                line-height: 25px;
+                dt{
+                    font-size: $font-14;
+                    @include padding;
+                    font-weight: bold;
+                }
+                dd{
+                    font-size: $font-16;
+                    padding-bottom: $font-30;
+                    @include lineheight($lh:25px);
+                    &:nth-child(2){
+                        font-size: $font-30;
+                        @include lineheight($lh:35px);
+                    }
+                    button{
+                        @include border;
+                        background-color: transparent;
+                        padding: $font-20;
+                        font-weight: bold;
+                            &:hover{
+                                background-color: $dark;
+                                color: $white;
+                                    i{
+                                        color: $white;
+                                    }    
+                                }   
+                        i{
+                            color: $dark;
+                            padding-left: $font-40;
+                        }
+                    }
+                        
+                    }
+                }
+            }
+        }
+        p{
+            img{
+                width: 850px;
+            }
+        }
+    }h1{
+        img{
+            width: 120px;
+            margin-left: $font-20;
+            margin-right: 145px;
+        }
+    }
+
+/* article box02 */
+
+article.box02{
+    @include box;
+    position: relative;
+    .prev{
+        position: absolute;
+        left:0;
+        top:40%;
+        width:100px;
+        height:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: $dark;
+            i{
+                color: $white;
+            }
+        }
+    .next{
+        position: absolute;
+        right:0;
+        top:40%;
+        width:100px;
+        height:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark;
+        z-index: 10;
+        i{
+            color: $white;
+        }
+    }    
+    div{
+        width:calc(200% - 75px);
+        @include flex;
+        @include padding($bottom:50px);
+        > dl{
+            width:12.5%;
+            line-height: 25px;        
+            dt{
+                font-size: $font-14;
+                padding-bottom: $font-16;
+                font-weight: bold;
+            }
+            dd{
+                font-size: $font-14;
+                padding-bottom: $font-30;
+                line-height: 25px;
+                &:nth-child(2){
+                    @include lineheight($lh:35px);
+                    font-size: $font-30;
+                }
+            }
+        }
+        figure{
+            width:12.5%;
+            position: relative; 
+            img{
+                width:90%;
+                display: flex;
+                @include padding($bottom:100px);
+            }
+            figcaption{
+            dl{
+                position: absolute;
+                text-align: center;
+                width: 90%;
+                bottom: 0; left: 0;
+                @include lineheight;
+                dt{font-size: $font-14;
+                    font-weight: bold;}
+                dd{font-size: 14px;}
+            }
+            }
+        }
+    }
+}
+
+/* article box03 */
+article.box03{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dt{font-size: $font-14;
+                @include padding;
+                font-weight: bold;}
+            dd{
+                font-size: $font-16;
+                padding-bottom: $font-30;
+                @include lineheight($lh:25px);
+                    &:nth-child(2){
+                        font-size: $font-30;
+                        @include lineheight($lh:35px);
+                    }
+                    button{
+                        @include border;
+                        background-color: transparent;
+                        padding: $font-20;
+                        font-weight: bold;
+                            &:hover{
+                                background-color: $dark;
+                                color: $white;
+                                    i{
+                                        color: $white;
+                                    }    
+                                }   
+                        i{
+                            color: $dark;
+                            padding-left: 150px;
+                        }
+                    }
+            }
+        }
+        p{
+            img{
+                width: 1118px;
+            }
+        }
+    }
+}
+
+/* article box04 */
+article.box04{
+    @include box;
+    position: relative;
+    .prevv{
+        position: absolute;
+        left:0;
+        top:40%;
+        width:100px;
+        height:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: $dark;
+            i{
+                color: $white;
+            }
+        }
+    .nextt{
+        position: absolute;
+        right:0;
+        top:40%;
+        width:100px;
+        height:100px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        background-color: $dark;
+        i{
+            color: $white;
+        }
+    }    
+    div{
+        width:calc(125% - 75px);
+        @include flex;
+        @include padding($bottom:50px);
+        > dl{
+            width:20%;
+            line-height: 25px;        
+            dt{
+                font-size: $font-14;
+                padding-bottom: $font-16;
+                font-weight: bold;
+            }
+            dd{
+                font-size: $font-14;
+                padding-bottom: $font-30;
+                line-height: 25px;
+                &:nth-child(2){
+                    @include lineheight($lh:35px);
+                    font-size: $font-30;
+                }
+            }
+        }
+        figure{
+            width:20%;
+            position: relative; 
+            img{
+                width:90%;
+                display: flex;
+                @include padding($bottom:100px);
+            }
+            figcaption{
+            dl{
+                position: absolute;
+                text-align: center;
+                width: 90%;
+                bottom: 0; left: 0;
+                @include lineheight;
+                dt{font-size: $font-14;
+                    font-weight: bold;}
+                dd{font-size: 14px;}
+            }
+            }
+        }
+    }
+}
+
+/* article box05 */
+article.box05{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            
+            dt{font-size: $font-30;
+                @include padding;
+            }
+            dd{
+                font-size: $font-16;
+                padding-bottom: $font-30;
+                @include lineheight($lh:25px);
+                    button{
+                        @include border;
+                        background-color: transparent;
+                        padding: $font-20;
+                        font-weight: bold;
+                            &:hover{
+                                background-color: $dark;
+                                color: $white;
+                                    i{
+                                        color: $white;
+                                    }    
+                                }   
+                        i{
+                            color: $dark;
+                            padding-left: $font-40;
+                        }
+                    }
+            }
+        }
+        p{
+            img{
+                width: 1118px;
+            }
+        }
+    }
+}
+
+/* article box06 */
+article.box06{
+    @include box; 
+    div{
+        width:calc(100% - 75px);
+        @include flex;
+        > dl{
+            width:25%;
+            line-height: 25px;        
+            dt{
+                font-size: $font-14;
+                padding-bottom: $font-16;
+                font-weight: bold;
+            }
+            dd{
+                font-size: $font-14;
+                padding-bottom: $font-30;
+                line-height: 25px;
+                &:nth-child(2){
+                    font-size: $font-30;
+                }
+            }
+        }
+        figure{
+            width:25%;
+            position: relative; 
+            img{
+                display: flex;
+                width:90%;
+                @include padding($bottom:100px)
+            }
+            figcaption{
+            
+            dl{
+                position: absolute;
+                text-align: center;
+                width: 90%;
+                bottom: 0; left: 0;
+                @include lineheight;
+                dt{font-size: $font-14;
+                    font-weight: bold;}
+                dd{font-size: 14px;}
+            }
+            }
+        }
+    }
+}
+
+/* article box07 */
+article.box07{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            
+            dt{font-size: $font-14;
+                @include padding;
+                font-weight: bold;}
+            dd{
+                font-size: $font-16;
+                padding-bottom: $font-30;
+                @include lineheight($lh:25px);
+                    &:nth-child(2){
+                        font-size: $font-30;
+                        @include lineheight($lh:35px);
+                    }
+                    button{
+                        @include border;
+                        background-color: transparent;
+                        padding: $font-20;
+                        font-weight: bold;
+                            &:hover{
+                                background-color: $dark;
+                                color: $white;
+                                    i{
+                                        color: $white;
+                                    }    
+                                }   
+                        i{
+                            color: $dark;
+                            padding-left: 100px;
+                        }
+                    }
+            }
+        }
+        p{
+            img{
+                width: 1118px;
+            }
+        }
+    }
+}
+
+/* article box08 */
+article.box08{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dt{font-size: $font-30;
+                @include padding;
+            }
+            dd{
+                font-size: $font-16;
+                padding-bottom: $font-30;
+                @include lineheight($lh:25px);
+                    button{
+                        @include border;
+                        background-color: transparent;
+                        padding: $font-20;
+                        font-weight: bold;
+                            &:hover{
+                                background-color: $dark;
+                                color: $white;
+                                    i{
+                                        color: $white;
+                                    }    
+                                }   
+                        i{
+                            color: $dark;
+                            padding-left:100px;
+                        }
+                    }
+            }
+        }
+        p{
+            img{
+                width: 1118px;
+            }
+        }
+    }
+}
+
+/* article box08 */
+article.box09{
+    background-color: $back;
+    padding: 142px 0;
+    dl{
+        @include width($wd:900px);
+        @include center;
+        dt{
+            font-size: $font-30;
+            margin-bottom: $font-40;
+        }
+        dd{
+            font-size: $font-16;
+        }
+    }
+}
