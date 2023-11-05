@@ -552,9 +552,6 @@ aside {
   font-size: 14px;
   color: #F7F5E8;
 }
-aside dl {
-  width: 20%;
-}
 aside dl:nth-child(5) {
   width: 700px;
   padding-right: 20px;
