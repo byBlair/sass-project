@@ -69,6 +69,7 @@ article.box01{
 
 article.box02{
     @include box;
+    overflow: hidden;
     position: relative;
     .prev{
         position: absolute;
@@ -106,7 +107,7 @@ article.box02{
         @include padding($bottom:50px);
         > dl{
             width:12.5%;
-            line-height: 25px;        
+            line-height: 25px;    
             dt{
                 font-size: $font-14;
                 padding-bottom: $font-16;
@@ -124,11 +125,11 @@ article.box02{
         }
         figure{
             width:12.5%;
-            position: relative; 
+            position: relative;    
             img{
                 width:90%;
                 display: flex;
-                @include padding($bottom:100px);
+                @include padding($bottom:100px); 
             }
             figcaption{
             dl{
@@ -196,6 +197,7 @@ article.box03{
 article.box04{
     @include box;
     position: relative;
+    overflow: hidden;
     .prevv{
         position: absolute;
         left:0;

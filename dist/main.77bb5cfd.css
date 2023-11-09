@@ -122,6 +122,7 @@ article.box02 {
   background-color: #fffef2;
   padding: 50px 0 100px 75px;
   /*     overflow: hidden; */
+  overflow: hidden;
   position: relative;
 }
 article.box02 .prev {
@@ -256,6 +257,7 @@ article.box04 {
   padding: 50px 0 100px 75px;
   /*     overflow: hidden; */
   position: relative;
+  overflow: hidden;
 }
 article.box04 .prevv {
   position: absolute;
