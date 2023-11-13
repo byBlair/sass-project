@@ -11022,8 +11022,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _jquery.default)(function () {
   btn01();
   btn02();
-  btn03();
-  btn04();
 });
 var section01 = false;
 function btn01() {
@@ -11046,30 +11044,6 @@ function btn02() {
       marginLeft: '+=' + Width + 'px'
     }, function () {
       (0, _jquery.default)('box02').css('margin-left', '+' + Width + 'px');
-    });
-    section01 = !section01;
-  });
-}
-function btn03() {
-  var Width02 = (0, _jquery.default)('.box04').width();
-  (0, _jquery.default)('.prevv').on('click', function () {
-    if (!section01) return;
-    (0, _jquery.default)('.box04>div').animate({
-      marginLeft: '+=' + Width02 + 'px'
-    }, function () {
-      (0, _jquery.default)('box04').css('margin-left', '+' + Width02 + 'px');
-    });
-    section01 = !section01;
-  });
-}
-function btn04() {
-  var Width02 = (0, _jquery.default)('.box04').width();
-  (0, _jquery.default)('.nextt').on('click', function () {
-    if (section01) return;
-    (0, _jquery.default)('.box04>div').animate({
-      marginLeft: '-=' + Width02 + 'px'
-    }, function () {
-      (0, _jquery.default)('box04>div').css('margin-left', '-' + Width02 + 'px');
     });
     section01 = !section01;
   });
@@ -11099,7 +11073,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64033" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54249" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
